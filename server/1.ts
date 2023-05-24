@@ -20,12 +20,16 @@ app.post('/login', (req, res) => {
   connection.query('SELECT * FROM user1 WHERE username = ? AND password = ?', [user.name, user.password], (error, results) => {
     if (error) {
       console.error(error);
-      res.status(500).json({ message: '登录失败' });
+      res.status(500).json({ message: '查询错误' });
     } else {
-      res.json({ message: '登录成功' });
+      if (results.length > 0) {
+        res.json({ message: '登录成功' });
+      } else if (results.length == 0) {
+        res.json({ message: '登录失败' })
+      }
     }
   });
-  res.json({ message: '注册成功' });
+  
 });
 
 app.get('/login', (req, res) => {
