@@ -26,7 +26,7 @@
 
         </div>
         <div class="button">
-          <button type="submit" @click.prevent="fetchData">登录</button>
+          <button type="submit" @click.prevent="submitForm">登录</button>
           <button type="reset">重置</button>
         </div>
       </form>
