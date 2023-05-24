@@ -1,3 +1,53 @@
+<script setup >
+import { reactive, ref } from 'vue'
+import axios from 'axios';
+import { useRouter, useRoute } from 'vue-router'
+const form = reactive({
+  name: '',
+  password: ''
+})
+let show = ref(false)
+let input = ref(null)
+function submitForm() {
+  if (form.name.length > 0 && form.password.length > 0) {
+    console.log('表单提交');
+    axios.post('/api/login', form)
+      .then(response => {
+        console.log(response);
+        if (response.data.message === '注册成功') {
+          alert('登录成功');
+          // window.location.href = '/home';
+        } else {
+          alert('用户信息错误');
+        }
+      })
+  } else {
+    alert('请填写相关信息');
+  }
+}
+
+const data = ref(null)
+const error = ref(null)
+const loading = ref(false)
+const fetchData = async () => {
+  try {
+    loading.value = true
+    const response = await axios.get('/api/login')
+    data.value = response.data
+    console.log(data.value);
+  } catch (err) {
+    error.value = err.message
+  } finally {
+    loading.value = false
+  }
+}
+const router = useRouter()
+const route = useRoute()
+function tiao() {
+  console.log('跳转');
+  router.push('res')
+}
+</script>
 <template>
   <div class="nav">
     <div class="navchild"></div>
@@ -30,54 +80,11 @@
           <button type="reset">重置</button>
         </div>
       </form>
+      <button  @click="tiao"> 还没有勇士通行证，请注册</button>
     </div>
 
   </div>
 </template>
-<script setup >
-import { reactive, ref } from 'vue'
-import axios from 'axios';
-// do not use same name with ref
-const form = reactive({
-  name: '',
-  password: ''
-})
-let show = ref(false)
-let input = ref(null)
-function submitForm() {
-  if (form.name.length>0 && form.password.length>0) {
-    console.log('表单提交');
-    axios.post('/api/login', form)
-      .then(response => {
-        console.log(response);
-        if (response.data.message === '注册成功') {
-          alert('登录成功');
-          // window.location.href = '/home';
-        } else {
-          alert('用户信息错误');
-        }
-      })
-  } else {
-    alert('请填写相关信息');
-  }
-}
-
-const data = ref(null)
-const error = ref(null)
-const loading = ref(false)
-const fetchData = async () => {
-  try {
-    loading.value = true
-    const response = await axios.get('/api/login')
-    data.value = response.data
-    console.log(data.value);
-  } catch (err) {
-    error.value = err.message
-  } finally {
-    loading.value = false
-  }
-}
-</script>
 <style scoped lang="less">
 .nav {}
 
@@ -153,6 +160,7 @@ const fetchData = async () => {
         }
       }
     }
+
   }
 
   .button {
@@ -171,6 +179,17 @@ const fetchData = async () => {
       height: 30px;
       border-radius: 6px;
     }
+  }
+
+  a {
+    display: inline-block;
+    height: 15px;
+    position: relative;
+    left: 230px;
+    top: 50px;
+    font-size: 15px;
+    color: #ffcc00;
+    text-decoration: underline;
   }
 }
 </style>
