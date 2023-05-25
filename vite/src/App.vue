@@ -43,10 +43,7 @@ const fetchData = async () => {
 }
 const router = useRouter()
 const route = useRoute()
-function tiao() {
-  console.log('跳转');
-  router.push('res')
-}
+
 </script>
 <template>
   <div class="nav">
@@ -80,9 +77,9 @@ function tiao() {
           <button type="reset">重置</button>
         </div>
       </form>
-      <button  @click="tiao"> 还没有勇士通行证，请注册</button>
+      <router-link to="/res">还没有勇士通行证，请注册</router-link>
+      <router-view></router-view>
     </div>
-
   </div>
 </template>
 <style scoped lang="less">
