@@ -73,12 +73,10 @@ const route = useRoute()
 
         </div>
         <div class="button">
-          <button type="submit" @click.prevent="submitForm">登录</button>
+          <button type="submit" >登录</button>
           <button type="reset">重置</button>
         </div>
       </form>
-      <router-link to="/res">还没有勇士通行证，请注册</router-link>
-      <router-view></router-view>
     </div>
   </div>
 </template>
