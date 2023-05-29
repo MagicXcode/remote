@@ -16,7 +16,6 @@ function submitForm() {
         console.log(response);
         if (response.data.message === '注册成功') {
           alert('登录成功');
-          // window.location.href = '/home';
         } else {
           alert('用户信息错误');
         }
