@@ -75,6 +75,7 @@ const route = useRoute()
           <button type="submit" >登录</button>
           <button type="reset">重置</button>
         </div>
+        <a href="../resgister/index.html">没有账号请注册，请点击这里跳转到注册页面</a>
       </form>
     </div>
   </div>
@@ -162,7 +163,8 @@ const route = useRoute()
     flex-direction: row;
     justify-content: center;
     margin-top: 30px;
-
+    position:  relative;
+    left:20px;
     button:first-child {
       margin-right: 20px;
     }
@@ -179,8 +181,8 @@ const route = useRoute()
     display: inline-block;
     height: 15px;
     position: relative;
-    left: 230px;
-    top: 50px;
+    left: 200px;
+    top: 80px;
     font-size: 15px;
     color: #ffcc00;
     text-decoration: underline;

@@ -12,7 +12,9 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, '')
       }
     },
-    cors: true,
-    port:9090
-  }
+    cors: true
+    ,
+    port:5173,
+    disableHostCheck: true
+  },
 })
