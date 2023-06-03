@@ -19,7 +19,7 @@
         <input class="input" type="text" placeholder="xx年-xx月-xx日" v-model="form.date1" required="true" />
       </div>
       <div>
-        <button type="submit">提交</button>
+        <button type="submit" @click="submit">提交</button>
         <button type="reset">重置</button>
       </div>
     </form>
@@ -45,18 +45,23 @@ let check = () => {
 
 let submit = () => {
   console.log(form);
-  axios.post('/api/regsiter', form)
-    .then(response => {
-      console.log(response);
-      if (response.data.message === '注册成功') {
-        alert('注册成功!2秒后跳转到首页页面');
-        setTimeout(() => {
-          window.location.href = '/login'; // 替换为实际的登录页面路径
-        }, 2000);
-      } else {
-        alert('用户信息错误');
-      }
-    })
+  // axios.post('/api/regsiter', form)
+  //   .then(response => {
+  //     console.log(response);
+  //     if (response.data.message === '注册成功') {
+  //       alert('注册成功!2秒后跳转到首页页面');
+  //       setTimeout(() => {
+  //         window.location.href = '/login'; // 替换为实际的登录页面路径
+  //       }, 2000);
+  //     } else {
+  //       alert('用户信息错误');
+  //     }
+  //   })
+
+  alert("注册成功， 2S后即将跳转到首页")
+  setTimeout(() => {
+    window.location.href = "../../headpage/index.html"; // 替换为实际的登录页面路径
+  }, 2000);
 }
 
 </script>
