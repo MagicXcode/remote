@@ -128,7 +128,7 @@
                     <h2 class="title">巴哈姆特音乐集卡</h2>
                     <h3 class="subtitle">BAHAMUTE</h3>
                 </div>
-                <div class="timeline">
+                <div class="timeline" ref="timeline">
                     <div class="item" data-text="《你的孤独，虽败犹荣》">
                         <div class="content">
                             <img src="./img/01.jpg" alt="" class="img">
@@ -176,7 +176,7 @@
                             <div class="content">
                                 <img src="./img/05.jpg" alt="" class="img">
                                 <h2 class="content-title">2002</h2>
-                                <p class="content-desc">
+                                <p class="content-desc " >
                                     如果你停止，就是谷底。如果你还在继续，
                                     就是上坡。这是我听过关于人生低谷最好的阐述。
                                 </p>
@@ -239,8 +239,15 @@ import {
     Shop,
     Tools,
 } from '@element-plus/icons-vue'
+import { onMounted,ref,reactive } from 'vue'
 
+// onMounted(()=>{
+//     window.addEventListener('scroll', handleScroll);
+// })
 
+const handleScroll=()=>{
+    
+}
 </script>
 
 
@@ -394,8 +401,8 @@ div#nav {
 
 .item {
     padding: 40px 0;
-    // opacity: 0.3;
-    // filter: blur(2px);
+    opacity: 0.3;
+    filter: blur(2px);
     transition: 0.5s;
     box-sizing: border-box;
     position: relative;
