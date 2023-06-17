@@ -8,8 +8,7 @@ const routers=createRouter({
         {
             path:'/res',
             component:ChildB
-        },
-
+        }
     ]
 })
 

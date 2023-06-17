@@ -20,7 +20,7 @@
                                 <span>首页</span>
                             </template>
                             <el-menu-item-group title="我们的历程">
-                                <el-menu-item index="1-1">
+                                <el-menu-item index="1-1" @click="clickfunc(1)">
                                     <span>音乐卡片</span>
                                 </el-menu-item>
                             </el-menu-item-group>
@@ -122,11 +122,13 @@
                 </el-col>
             </el-row>
         </div>
-        <card />
+        <div class="wai" :class="{wai:disp}">
+            <iframe src="https://www.bilibili.com/" style="width: 100%; height: 100vh;"></iframe>
+        </div>
+        <router-view></router-view>
     </div>
 </template>
 <script setup>
-import card from  './components/1.vue'
 import {
     Menu as IconMenu,
     DataBoard,
@@ -141,15 +143,20 @@ import {
     Tools,
 } from '@element-plus/icons-vue'
 import { onMounted, ref, reactive } from 'vue'
-
-// onMounted(()=>{
-//     window.addEventListener('scroll', handleScroll);
-// })
-
-const handleScroll = () => {
-
+import { useRouter, useRoute } from 'vue-router'
+const router = useRouter()
+const route = useRoute()
+let disp=reactive(true)
+let clickfunc = (id) => {
+    disp=!disp
+    router.push('/vue' + id)
 }
+onMounted(() => {
+   
+})
 </script>
+
+
 
 
 <style scoped lang="less">
@@ -217,4 +224,12 @@ div#nav {
 
 }
 
+.wai {
+    display: inline-block;
+    position: absolute;
+    height: auto;
+    width: calc(100% - 200px);
+    top: 40px;
+    left: 200px;
+}
 </style>

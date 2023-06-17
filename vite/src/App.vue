@@ -24,6 +24,11 @@ function submitForm() {
     alert('请填写相关信息');
   }
 }
+const router = useRouter()
+const route = useRoute()
+function subForm() {
+  router.push({path:'headpage/'})
+}
 
 const data = ref(null)
 const error = ref(null)
@@ -40,8 +45,7 @@ const fetchData = async () => {
     loading.value = false
   }
 }
-const router = useRouter()
-const route = useRoute()
+
 
 </script>
 <template>
@@ -72,8 +76,8 @@ const route = useRoute()
 
         </div>
         <div class="button">
-          <button type="submit" >登录</button>
-          <button type="reset">重置</button>
+          <button type="submit" @click="subForm">登录</button>
+          <button type="reset">重置</button>  
         </div>
         <a href="../resgister/index.html">没有账号请注册，请点击这里跳转到注册页面</a>
       </form>
