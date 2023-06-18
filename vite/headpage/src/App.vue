@@ -102,7 +102,7 @@
                                 <span>赠送会员</span>
                             </el-menu-item>
                         </el-sub-menu>
-                        <el-sub-menu index="5">
+                        <el-sub-menu index="5" >
                             <template #title>
                                 <el-icon>
                                     <Tools />

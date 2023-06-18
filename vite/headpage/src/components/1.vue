@@ -11,7 +11,7 @@
                     <div class="item" data-text="《你的孤独，虽败犹荣》">
                         <div class="content">
                             <img src="../img/01.jpg" alt="" class="img">
-                            <h2 class="content-title">2002</h2>
+                            <h2 class="content-title">2015</h2>
                             <p class="content-desc">
                                 如果你停止，就是谷底。如果你还在继续，
                                 就是上坡。这是我听过关于人生低谷最好的阐述。
@@ -21,7 +21,7 @@
                         <div class="item" data-text="《你的孤独，虽败犹荣》">
                             <div class="content">
                                 <img src="../img/02.jpg" alt="" class="img">
-                                <h2 class="content-title">2002</h2>
+                                <h2 class="content-title">2016</h2>
                                 <p class="content-desc">
                                     如果你停止，就是谷底。如果你还在继续，
                                     就是上坡。这是我听过关于人生低谷最好的阐述。
@@ -32,7 +32,7 @@
                         <div class="item" data-text="《你的孤独，虽败犹荣》">
                             <div class="content">
                                 <img src="../img/03.jpg" alt="" class="img">
-                                <h2 class="content-title">2002</h2>
+                                <h2 class="content-title">2017</h2>
                                 <p class="content-desc">
                                     如果你停止，就是谷底。如果你还在继续，
                                     就是上坡。这是我听过关于人生低谷最好的阐述。
@@ -43,7 +43,7 @@
                         <div class="item" data-text="《你的孤独，虽败犹荣》">
                             <div class="content">
                                 <img src="../img/04.jpg" alt="" class="img">
-                                <h2 class="content-title">2002</h2>
+                                <h2 class="content-title">2018</h2>
                                 <p class="content-desc">
                                     如果你停止，就是谷底。如果你还在继续，
                                     就是上坡。这是我听过关于人生低谷最好的阐述。
@@ -54,7 +54,7 @@
                         <div class="item" data-text="《你的孤独，虽败犹荣》">
                             <div class="content">
                                 <img src="../img/05.jpg" alt="" class="img">
-                                <h2 class="content-title">2002</h2>
+                                <h2 class="content-title">2019</h2>
                                 <p class="content-desc " >
                                     如果你停止，就是谷底。如果你还在继续，
                                     就是上坡。这是我听过关于人生低谷最好的阐述。
@@ -65,7 +65,7 @@
                         <div class="item" data-text="《你的孤独，虽败犹荣》">
                             <div class="content">
                                 <img src="../img/06.jpg" alt="" class="img">
-                                <h2 class="content-title">2002</h2>
+                                <h2 class="content-title">2020</h2>
                                 <p class="content-desc">
                                     如果你停止，就是谷底。如果你还在继续，
                                     就是上坡。这是我听过关于人生低谷最好的阐述。
@@ -76,7 +76,7 @@
                         <div class="item" data-text="《你的孤独，虽败犹荣》">
                             <div class="content">
                                 <img src="../img/07.jpg" alt="" class="img">
-                                <h2 class="content-title">2002</h2>
+                                <h2 class="content-title">2021</h2>
                                 <p class="content-desc">
                                     如果你停止，就是谷底。如果你还在继续，
                                     就是上坡。这是我听过关于人生低谷最好的阐述。
@@ -87,7 +87,7 @@
                         <div class="item" data-text="《你的孤独，虽败犹荣》">
                             <div class="content">
                                 <img src="../img/08.jpg" alt="" class="img">
-                                <h2 class="content-title">2002</h2>
+                                <h2 class="content-title">2022</h2>
                                 <p class="content-desc">
                                     如果你停止，就是谷底。如果你还在继续，
                                     就是上坡。这是我听过关于人生低谷最好的阐述。
