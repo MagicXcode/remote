@@ -8,6 +8,7 @@ const form = reactive({
 })
 let show = ref(false)
 let input = ref(null)
+
 function submitForm() {
   if (form.name.length > 0 && form.password.length > 0) {
     console.log('表单提交');
@@ -26,8 +27,13 @@ function submitForm() {
 }
 const router = useRouter()
 const route = useRoute()
+
 function subForm() {
-  router.push({path:'headpage/'})
+  if(form.name.trim().length != 0 && form.password.trim().length != 0)
+  {
+
+    router.push({path:'headpage/'})
+  } 
 }
 
 const data = ref(null)

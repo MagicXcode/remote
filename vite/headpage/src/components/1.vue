@@ -1,7 +1,7 @@
 
 <template>
   <div>
-    <div class="wai">
+    <div :class="{ 'newcss': isTransition, 'wai': !isTransition }" @scroll="handleScroll">
             <div class="music-card">
                 <div class="header">
                     <h2 class="title">巴哈姆特音乐集卡</h2>
@@ -104,7 +104,10 @@
 </template>
 <script setup>
 import { ref, onMounted } from 'vue';
-
+const isTransition = ref(false);
+let handleScroll=()=>{
+    isTransition.value = true;
+}
 </script>
 <style scoped lang="less">
 
@@ -148,16 +151,24 @@ import { ref, onMounted } from 'vue';
     width: calc(100% - 200px);
     top: 40px;
     left: 200px;
-
+    transition: all 0.5s ease;
     .music-card {
-        background: linear-gradient(45deg, #fbda61, #fd69d1);
+        
+        background: linear-gradient(45deg, rgb(241, 227, 176,0.1), rgb(248, 172, 225,0.1));
         transition: 0.3s ease 0s;
         background-attachment: fixed;
         background-size: cover;
-
-
-
     }
+}
+.newcss
+{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index:200;
 }
 
 .wai:before {
@@ -193,8 +204,8 @@ import { ref, onMounted } from 'vue';
 
 .item {
     padding: 40px 0;
-    opacity: 0.3;
-    filter: blur(2px);
+    // opacity: 0.3;
+    // filter: blur(2px);
     transition: 0.5s;
     box-sizing: border-box;
     position: relative;
