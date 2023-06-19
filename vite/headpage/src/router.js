@@ -3,6 +3,7 @@ import vue1 from './components/1.vue'
 import vue2 from './components/2.vue'
 import vue3 from './components/3.vue'
 import vue5 from './components/5.vue'
+import vue6 from './components/6.vue'
 const routers = createRouter({
     history: createWebHistory(),
     routes: [
@@ -25,6 +26,10 @@ const routers = createRouter({
         {
             path: '/vue4',
             component: () => import('./components/4.vue')
+        },
+        {
+            path: '/vue6',
+            component: vue6
         }
     ]
 })

@@ -11,7 +11,7 @@
         <div id="nav">
             <el-row>
                 <el-col :span="12">
-                    <el-menu  class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
+                    <el-menu class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
                         <el-sub-menu index="1">
                             <template #title>
                                 <el-icon>
@@ -70,7 +70,7 @@
 
                         </el-sub-menu>
 
-                        <el-menu-item index="3">
+                        <el-menu-item index="3" @click="clickfunc(6)">
                             <el-icon>
                                 <Star />
                             </el-icon>
@@ -102,7 +102,7 @@
                                 <span>赠送会员</span>
                             </el-menu-item>
                         </el-sub-menu>
-                        <el-sub-menu index="5" >
+                        <el-sub-menu index="5">
                             <template #title>
                                 <el-icon>
                                     <Tools />
@@ -127,16 +127,19 @@
                 </el-col>
             </el-row>
         </div>
-        <div v-if="false">
-            <Calendar :disp="disp"/>
+        <!-- <div v-if="disp">
+            <Calendar :disp="disp" />
+        </div> -->
+        <div v-loading="loading" element-loading-text="Loading..."  class="wai">
+
         </div>
         <router-view></router-view>
     </div>
 </template>
 <script setup>
-import  Calendar  from  './components/3.vue'
+import Calendar from './components/3.vue'
 import {
-    Menu ,
+    Menu,
     DataBoard,
     Setting,
     Edit,
@@ -152,16 +155,17 @@ import { onMounted, ref, reactive } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 const router = useRouter()
 const route = useRoute()
-let disp=ref(true)
+let disp = ref(true)
 
 let clickfunc = (id) => {
-    disp=false
+    disp = false
     router.push('/vue' + id)
 }
-let chu=()=>{
-    disp=true
+let chu = () => {
+    disp = true
     router.push('/vue3')
 }
+
 </script>
 
 
@@ -174,6 +178,7 @@ div#tou {
     top: 0;
     width: 100%;
     height: 40px;
+
     div:nth-child(1) {
         display: inline-block;
         height: 40px;
@@ -183,6 +188,7 @@ div#tou {
         border-right-color: red;
         background-color: coral;
         border-radius: 5px 0px 0px 0px;
+
         p {
 
             letter-spacing: 26px;
@@ -201,12 +207,13 @@ div#tou {
         border-radius: 0px 10px 0px 0px;
         height: 30px;
         width: calc(100% - 198.5px);
-        background:url('./assets/1.png');
+        background: url('./assets/1.png');
         background-size: cover;
         background-repeat: no-repeat;
         display: inline-block;
         background-color: lightpink;
         padding: 5px 0px 5px 0;
+
         p {
             position: relative;
             text-align: center;

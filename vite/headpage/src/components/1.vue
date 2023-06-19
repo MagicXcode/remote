@@ -211,7 +211,7 @@ let handleScroll=()=>{
     position: relative;
     display: flex;
     flex-direction: column;
-    transform: translateY(-80px);
+    transition: 0.2s ease;
 }
 
 .item:nth-child(even) {
@@ -229,6 +229,11 @@ let handleScroll=()=>{
     padding-right: 15px;
 }
 
+.item:hover {
+    transform: translateY(-50px);
+    opacity: 1;
+    filter: blur(0px);
+}
 
 .img {
     max-width: 100%;
