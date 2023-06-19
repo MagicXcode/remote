@@ -28,6 +28,9 @@ function submitForm() {
 const router = useRouter()
 const route = useRoute()
 
+function resgist() {
+  router.push({ path: 'resgister/' })
+}
 function subForm() {
   if(form.name.trim().length != 0 && form.password.trim().length != 0)
   {
@@ -85,7 +88,7 @@ const fetchData = async () => {
           <button type="submit" @click="subForm">登录</button>
           <button type="reset">重置</button>  
         </div>
-        <a href="../resgister/index.html">没有账号请注册，请点击这里跳转到注册页面</a>
+        <a href="../resgister/index.html" @click="resgist">没有账号请注册，请点击这里跳转到注册页面</a>
       </form>
     </div>
   </div>
